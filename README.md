@@ -42,26 +42,26 @@ In order to request data from the eBird API, a county code is required in the fo
 
 The primary datasets (eBird and NOAA CO-OPS) are constructed and merged in the NOAA_eBird_data_acquisition_cleaning_merging.py script. The output data is saved in the 'data' folder for each run and the file is saved using the date range used for data requesting. Because each run of the script only provides several weeks worth of data, a script was written to merge the datasets in the 'data' folder and save the consolidated dataset into the 'all_data' folder. The data can be updated using the 'weekly_data_load_join.py' file. Recommendation is to upload weekly due to frequency of NOAA data uploads. The NOAA_eBird_data_acquisition_cleaning_merging.py and weekly_data_load_join.py scripts should be run weekly over the course of months or years to continue growing the dataset. At time of construction, the dataset consists of 168 rows and the following columns:
 
-sightingID
-observationDate
-observationTime
-county
-speciesName
-speciesCode
-locationName
-locationID
-lat
-lng
-howMany
-tideStationName
-highhighTime
-highhighWaterLevel
-highTime
-highWaterLevel
-lowTime
-lowWaterLevel
-lowlowTime
-lowlowWaterLevel
+1. sightingID
+2. observationDate
+3. observationTime
+4. county
+5. speciesName
+6. speciesCode
+7. locationName
+8. locationID
+9. lat
+10. lng
+11. howMany
+12. tideStationName
+13. highhighTime
+14. highhighWaterLevel
+15. highTime
+16. highWaterLevel
+17. lowTime
+18. lowWaterLevel
+19. lowlowTime
+20. lowlowWaterLevel
 
 For future iterations of this project, there are several opportunities for enrichment and expansion. For starters, there are additional datasets available for some tidal stations via the NOAA CO-OPS API, including seawater salinity, humidity, wind, air temperature, visibility, and water temperature. These values could potentially be integrated into the dataset to allow additional questions to be asked around relationship of environmental factors to avian sightings. Additionally, the extent of species being studied could be expanded. For this version of the project, only shorebirds were used. Other types of birds such as gulls, terns, and jaegers are also important birds which leverage the ocean shores of New Jersey as vital habitat, could be included in future iterations of the project. Additionally, there are tidal stations in other coastal and neighboring states including New York, Delaware, and Maryland that could be included in future revisions.
 
