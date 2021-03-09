@@ -1,7 +1,7 @@
 # NOAA_eBird_data_merging
 Merging of NOAA CO-OPS tidal data with eBird data for shorebirds in selected coastal New Jersey counties
 
-This is a living dataset constructed of tidal data from the National Oceanic and Atmospheric Admistration Center for Operational Oceanic Products and Services (NOAA CO-OPS) and avian observation data compiled from the citizen-science project eBird. The scope of this data is coastal New Jersey with a date range of February 2021 onward. The goal of this project is to provide a reliable data source for citizen scientists and birdwatchers to understand the relationship of shorebird sightings and tide.
+This is a living dataset constructed of tidal data from the National Oceanic and Atmospheric Admistration Center for Operational Oceanic Products and Services (NOAA CO-OPS) and avian observation data compiled from the citizen-science project eBird. The scope of this data is coastal New Jersey with a date range of January 2020 onward. The goal of this project is to provide a reliable data source for citizen scientists and birdwatchers to understand the relationship of shorebird sightings and tide.
 
 Tidal information is made avaible via the NOAA CO-OPS API (documented here: https://api.tidesandcurrents.noaa.gov/api/prod/). The high_low parameter is used during request to gain access to high and low tide times and water levels. The counties with tidal data stations available are:
 
@@ -10,9 +10,7 @@ Tidal information is made avaible via the NOAA CO-OPS API (documented here: http
 3. Monmouth
 4. Cape May
 
-Due to limitations of the NOAA CO-OPS API, the data available for API is only updated intermitently. At the time of the initial dataset construction, no data was available for Atlantic City tidal station within the past 30 days. The code was commented out for the Atlantic City tidal station, however it is available for use if desired in future iterations of the project for the purpose of data enrichment and scope expansion. 
-
-The eBird API (documented here: https://documenter.getpostman.com/view/664302/S1ENwy59) allows users to download data of recent bird observations of birds seen in a given country, state, county, or location. Shorebirds are the focus of this project -- 23 species (listed below) were included in the eBird data request. Species selected are common to semi-common visitors to New Jersey beaches throughout various seasons. eBird data is only available to request for the past 30 days. Due to this limitation, NOAA CO-OPS requests are limited to t - 30 days as well. The get_observations request was used to gather data including: time of observation, species observed, quantity observed, location name, latitude, and longitude. The species (along with respective eBird species codes) within the context of this project are:
+The eBird API (documented here: https://documenter.getpostman.com/view/664302/S1ENwy59) allows users to download data of recent bird observations of birds seen in a given country, state, county, or location. Shorebirds are the focus of this project -- 23 species (listed below) were included in the eBird data request. Species selected are common to semi-common visitors to New Jersey beaches throughout various seasons. The get_observations request was used to gather data including: time of observation, species observed, quantity observed, location name, latitude, and longitude. eBird data is only available to request for the past 30 days. Due to this limitation, an additional request for data was made on the eBird website for all of New Jersey from January 2020 to present. The text file was received via email and pre-filtered using Excel PowerQuery for the relevant species then fed into a pandas dataframe within this project. The species (along with respective eBird species codes) within the context of this project are:
 
 1. American Oystercatcher (ameoys)
 2. Black-bellied Plover (bkbplo)
