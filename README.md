@@ -1,4 +1,4 @@
-# NOAA_eBird_data_merging
+# NOAA CO-OPS and eBird Data Merging -- New Jersey Shorebirds 2020-2021
 Merging of NOAA CO-OPS tidal data with eBird data for shorebirds in selected coastal New Jersey counties
 
 This is a living dataset constructed of tidal data from the National Oceanic and Atmospheric Admistration Center for Operational Oceanic Products and Services (NOAA CO-OPS) and avian observation data compiled from the citizen-science project eBird. The scope of this data is coastal New Jersey with a date range of January 2020 onward. The goal of this project is to provide a reliable data source for citizen scientists and birdwatchers to understand the relationship of shorebird sightings and tide.
